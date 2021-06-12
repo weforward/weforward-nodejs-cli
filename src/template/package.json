@@ -4,27 +4,32 @@
 	"private": true,
 	"scripts": {
 		"dev": "vue-cli-service serve --open",
-		"install": "npm install",
 		"build-package": "chcp 936 && vue-cli-service build --mode package",
 		"build-public": "chcp 936 && vue-cli-service build --mode public"
 	},
 	"dependencies": {
-		"vue": "^2.6.6",
-		"vue-router": "^3.0.7",
-		"weforward-protocol": "^1.0.3"
+		"core-js": "^3.8.3",
+		"vue": "^3.0.4",
+		"vue-router": "^4.0.6",
+		"weforward-protocol": "^1.0.4"
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-babel": "^3.5.0",
-		"@vue/cli-plugin-eslint": "^3.5.0",
-		"@vue/cli-service": "^3.6.0",
+		"@babel/core": "^7.12.16",
+		"@babel/eslint-parser": "^7.12.16",
+		"@vue/cli-plugin-babel": "~5.0.0-beta.0",
+		"@vue/cli-plugin-eslint": "~5.0.0-beta.0",
+		"@vue/cli-service": "~5.0.0-beta.0",
+		"@vue/compiler-sfc": "^3.0.4",
+		"babel-eslint":"^10.1.0",
+		"eslint": "^7.20.0",
+		"eslint-plugin-vue": "^7.2.0",
 		"archiver": "^3.1.1",
-		"babel-eslint": "^10.0.1",
 		"cross-env": "^7.0.2",
-		"eslint": "^5.8.0",
-		"eslint-plugin-vue": "^5.0.0",
 		"js-base64": "^2.5.2",
-		"vue-template-compiler": "^2.5.21",
-		"weforward-builder": "^1.0.2"
+		"less": "^3.12.2",
+		"less-loader": "^7.1.0",
+		"request": "^2.88.2",
+		"weforward-builder": "^1.0.3"
 	},
 	"eslintConfig": {
 		"root": true,

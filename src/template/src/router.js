@@ -1,7 +1,9 @@
 //该文件用于配置路由
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
+//该文件用于配置路由
+import {
+	createRouter,
+	createWebHistory
+} from 'vue-router';
 
 //页面路径
 const routes = [{
@@ -17,7 +19,7 @@ const routes = [{
 	},
 	//最后一项用于配置404
 	{
-		path: '*',
+		path: '/:pathMatch(.*)*',
 		component: () => import('./component/NotFind.vue'),
 		meta: {
 			title: '404'
@@ -26,17 +28,9 @@ const routes = [{
 ];
 
 //路由类型配置
-const router = new VueRouter({
-	mode: 'history',
+const router = createRouter({
+	history: createWebHistory(),
 	routes
-});
-
-//路由守护(更改页面title)
-router.beforeEach((to, from, next) => {
-	if (to.meta.title) {
-		document.title = to.meta.title;
-	}
-	next();
-});
+})
 
 export default router;
